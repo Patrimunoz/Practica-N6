@@ -6,8 +6,20 @@ function crearUsuario() {
     // {{nombre}} debe ser el nombre definido en cada instancia
     // Devuelve la clase
     // Tu código:
-  
-  }
+}
+function Usuario(usuario, nombre, email, password){
+
+this.usuario = usuario || "patrimunoz";
+this.nombre = nombre || "Patricia";
+this.email = email || "patitoputelli@gmail.com";
+this.password = password || "pp1234";
+this.saludar = function() {
+
+    return 'Hola, mi nombre es ' + this.nombre;}
+}
+const Patricia = new Usuario('Patricia');
+console.log(Patricia.saludar());
+
 
 
 
@@ -16,7 +28,16 @@ function crearUsuario() {
     // Los datos, son nombre, apellido y dni
     // Tu código:
   }
-  
+function datosPersona(nombre, apellido, dni){
+
+    this.nombre = nombre || "Carlos";
+    this.apellido = apellido || "Verona";
+    this.dni = dni || 12444555;
+  }
+  const Mike = new datosPersona('Mike');
+  const Brad = new datosPersona('Brad');
+  console.log (Mike.nombre)
+  console.log (Brad.nombre)
   
   function creaObj2() { 
     // Crea una función constructor llamada "Default" y luego crea dos personas nuevas con datos de datosPersona sin pasarle ningun campo
@@ -24,7 +45,18 @@ function crearUsuario() {
     // Los datos que deberian mostrarse al acceder a uno de ellos deben ser por deafult, los que ustedes quieran
     // Tu código:
   }
-  
+  function Default(nombre, apellido, dni){
+
+    this.nombre = nombre || "Max";
+    this.apellido = apellido || "Putelli";
+    this.dni = dni || 53222777;
+  }
+  const Ciro = new Default();
+  const Mateo = new Default();
+ 
+ console.log(Ciro)
+ 
+
   function Computador() { 
     // Deben crear una funcion constructora
     // Los datos son, id, marca, procesador, ram, ssd.
@@ -33,3 +65,20 @@ function crearUsuario() {
     // Los datos de la computadora deben guardarse dentro de otra variable y mostrar esa persona para ver los datos.
     // Tu código:
   }
+function Computador( id, marca, procesador, ram, ssd){
+
+    this.id = id || "Acer 600";
+    this.marca = marca || "Acer" ;
+    this.procesador = procesador || "Intel" ;
+    this.ram = ram || "8gb";
+    this.ssd = ssd || "15gb";
+    this.inicio = function (id, marca, procesador, ram, ssd) {
+
+        return 'Pc iniciando ' + this.id + this.marca + this.procesador + this.ram + this.ssd  ;};
+        
+    }
+    
+    const computador = new Computador();
+    console.log(computador.inicio());     
+
+
